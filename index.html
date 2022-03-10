@@ -2,9 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <script>
+      if('serviceWorker' in navigator){
+        navigator.serviceWorker.register('/service-worker.js');
+      } else {
+        console.log("Service worker is not supported");
+      }
+    </script>
     <script src="https://use.fontawesome.com/d1341f9b7a.js">
     </script>
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
     <title>Tamim Zarif Personal Website</title>
     <link rel="icon" type="image/x-icon" href="icon.png">
